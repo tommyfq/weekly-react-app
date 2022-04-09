@@ -1,0 +1,62 @@
+$primary-color : #06113C; 
+$secondary-color: #FF8C32;
+$muted-color: #DDDDDD;
+$light-color: #EEEEEE;
+
+$font-stack: Helvetica, sans serif;
+
+.bgPrimaryApp{
+    background-color: $primary-color;
+}
+
+.bgMuted{
+    background-color: $muted-color;
+}
+
+.textLight{
+    color: $light-color !important;
+}
+
+.justifyCenter{
+    justify-content: center !important;
+}
+
+.h450{
+    height:450px;
+}
+
+.card{
+    img{
+        height: 40%;
+    }
+}
+
+%secondaryTheme{
+    background-color: $secondary-color;
+    color: $primary-color;
+    border:none;
+}
+
+.secondaryBtn{
+    @extend %secondaryTheme;
+    &:hover{
+        background-color: $secondary-color;
+    }
+    &:focus{
+        background-color: $secondary-color;
+    }
+}
+
+.cardSecondary{
+    @extend %secondaryTheme;
+}
+
+@mixin p-lrt($param){
+    padding-left:$param !important;
+    padding-right:$param !important;
+    padding-top:$param !important;
+}
+
+.appContent{
+    @include p-lrt(16px);
+}
